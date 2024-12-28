@@ -1,0 +1,18 @@
+{
+  "name": "luke",
+  "packageManager": "yarn@4.2.2",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "jekyll-s": "bundle exec jekyll serve",
+    "jekyll-build": "bundle exec jekyll build",
+    "tailwind-w": "tailwindcss -i ./assets/css/main.css -o ./assets/css/styles.css --watch",
+    "tailwind-build": "tailwindcss -i ./assets/css/main.css -o ./assets/css/styles.css",
+    "start": "TAILWIND_MODE=watch npm-run-all --parallel tailwind-w jekyll-s",
+    "build-all": "npm-run-all --parallel tailwind-build jekyll-build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

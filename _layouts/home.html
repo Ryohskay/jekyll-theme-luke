@@ -1,0 +1,12 @@
+---
+layout: default
+og_type: website
+---
+{%- include header.html -%}
+
+{% if page.banner != nil %}
+    {% include banner.html %}
+{% endif %}
+
+<h1>{{ site.title }}</h1>
+<p>Lorem ipsum dolor sit amet.</p>
