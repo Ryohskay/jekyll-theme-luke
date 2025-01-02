@@ -7,6 +7,10 @@ module.exports = {
     "./_posts/*.[md,html]",
   ],
   theme: {
+    container: {
+      padding: '2rem',
+      margin: '2rem',
+    },
     extend: {},
   },
   plugins: [],

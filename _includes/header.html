@@ -1,8 +1,14 @@
-<span id="headerbox">
-    <span class="grid grid-rows-1 grid-flow-col gap-2">
-        <span class="logobox">
-            <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" width="30rem" class="logo"/>
-        </span>
-        <p class="text-4xl font-bold">Header here</p>
+<span class="mt-4 flex flex-row">
+    <span id="headerbox" class="flex flex-row align-bottom px-3 py-3">
+        <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" class="logo w-12 flex"/>
+        <p class="text-4xl font-bold flex">{{ site.title }}</p>
+    </span>
+    <span class="flex">
+        {% for link in site.header_links %}
+            <h2 class="text-3xl flex">
+                <a class="text-4xl" href="{{ link.url }}">{{ link.link_name }}</a>
+            </h2>
+        {% endfor %}
     </span>
 </span>
+<hr class="border-top-2 border-slate-300 mx-auto md:mx-3" />

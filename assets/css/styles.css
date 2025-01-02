@@ -554,20 +554,85 @@ video {
   display: none;
 }
 
-.grid {
-  display: grid;
+.container {
+  width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
-.grid-flow-col {
-  grid-auto-flow: column;
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
 }
 
-.grid-rows-1 {
-  grid-template-rows: repeat(1, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
 }
 
-.gap-2 {
-  gap: 0.5rem;
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity, 1));
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -579,7 +644,9 @@ video {
   font-weight: 700;
 }
 
-.logo {
-  width: x-auto;
-  height: x-auto;
+@media (min-width: 768px) {
+  .md\:mx-3 {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
 }
