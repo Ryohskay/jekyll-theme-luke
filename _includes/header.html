@@ -1,12 +1,13 @@
-<span class="mt-4 flex flex-row">
+<!-- HTML file for header menu on all pages -->
+<span class="mt-4 flex flex-row relative bg-white">
     <span id="headerbox" class="flex flex-row align-bottom px-3 py-3">
         <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" class="logo w-12 flex"/>
         <p class="text-4xl font-bold flex">{{ site.title }}</p>
     </span>
-    <span class="flex">
+    <span class="flex absolute top-0 right-0 mr-4 mt-3">
         {% for link in site.header_links %}
-            <h2 class="text-3xl flex">
-                <a class="text-4xl" href="{{ link.url }}">{{ link.link_name }}</a>
+            <h2 class="flex">
+                <a class="text-2xl px-4" href="{{ link.url] }}">{{ link.name }}</a>
             </h2>
         {% endfor %}
     </span>

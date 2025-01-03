@@ -33,14 +33,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/luke_theme_logo_trimmed.jpeg"
 logo_alt: "Luke theme's logo"
 
-
 header_links:
-  home:
-    link_name: "Home"
+  - name: "Home"
     url: "/"
-  about:
-    link_name: "About us"
-    url: "/about.html"
+  - name: "About us"
+    url: "/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
