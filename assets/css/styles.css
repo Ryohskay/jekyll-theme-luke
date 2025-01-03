@@ -606,33 +606,21 @@ video {
   top: 0px;
 }
 
-.float-right {
-  float: right;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mr-4 {
   margin-right: 1rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -676,9 +664,9 @@ video {
   vertical-align: bottom;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -686,18 +674,32 @@ video {
   line-height: 2.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-bold {
   font-weight: 700;
+}
+
+.first\:underline:first-child {
+  text-decoration-line: underline;
+}
+
+.first\:decoration-red-300:first-child {
+  text-decoration-color: #fca5a5;
+}
+
+.first\:decoration-slate-300:first-child {
+  text-decoration-color: #cbd5e1;
+}
+
+.first\:decoration-slate-600:first-child {
+  text-decoration-color: #475569;
+}
+
+.first\:decoration-dashed:first-child {
+  text-decoration-style: dashed;
+}
+
+.first\:underline-offset-4:first-child {
+  text-underline-offset: 4px;
 }
 
 @media (min-width: 768px) {
