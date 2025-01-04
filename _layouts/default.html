@@ -3,7 +3,13 @@
 
 {%- include head.html -%}
 
-<body>
+<body class="bg-white">
+    {%- include header.html -%}
+
+    {% if page.banner != nil %}
+        {% include banner.html %}
+    {% endif %}
+
     {{content}}
 </body>
 </html>

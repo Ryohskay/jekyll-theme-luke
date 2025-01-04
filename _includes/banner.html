@@ -1,9 +1,14 @@
 <div class="block container relative mx-auto mt-5">
-    <img src="{{ page.banner }}" alt="Website banner splash" class="z-10">
-    {%- if page.banner_text != nil -%}
-        <div class="absolute top-16 left-1 bg-white bg-gradient-to-r from-indigo-200 to-white rounded-lg px-4 py-3 z-20">
-            <p class="text-5xl">{{ page.banner_text }}</p>
+    <img src="{{ page.banner }}" alt="{{ page.banner_alt | default: 'Landing page hero image' }}" class="z-10">
+    {%- if page.on_banner_text != nil -%}
+        <div class="absolute top-16 left-1 bg-white bg-gradient-to-r from-indigo-200 to-white rounded-lg px-4 py-3 z-20 shadow-sm">
+            <p class="text-5xl">{{ page.on_banner_text }}</p>
         </div>
-        <div class="absolute w-12 h-16 top-14 left-1 bg-gradient-to-r from-indigo-200 to-indigo-500 rounded-lg -z-10"></div>
+        <div class="absolute w-12 h-16 top-14 left-1 bg-gradient-to-r from-indigo-200 to-indigo-500 rounded-lg -z-10 shadow-sm"></div>
+    {%- endif -%}
+    {%- if page.post_banner_text != nil -%}
+        <div class="container rounded-md bg-slate-200 shadow-md mt-3 text-center">
+            <p class="mx-auto text-4xl py-6 italic font-serif">{{ page.post_banner_text }}</p>
+        </div>
     {%- endif -%}
 </div>

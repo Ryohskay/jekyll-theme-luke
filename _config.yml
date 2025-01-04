@@ -39,6 +39,26 @@ header_links:
   - name: "About us"
     url: "/about"
 
+home_cards:
+  - image: "/assets/images/a-close-up-of-black-microphone.jpg"
+    img_alt: "A Close Up Of Black Microphone Photo by Thom Bradley on Burst by Shopify"
+    heading: "Hey"
+    description: "Lorem ipsum dolor sit amet."
+    button_text: "Read more"
+    button_url: "/"
+  - image: "/assets/images/entrepreneurs-journal.jpg"
+    img_alt: "Entrepreneurs Journal Photo by Matthew Henry on Burst by Shopify"
+    heading: "Hey"
+    description: "Lorem ipsum dolor sit amet."
+    button_text: "Read more"
+    button_url: "/"
+  - image: "/assets/images/laptop-on-desk.jpg"
+    img_alt: "Laptop On Desk Photo by Matthew Henry on Burst by Shopify"
+    heading: "Hey"
+    description: "Lorem ipsum dolor sit amet."
+    button_text: "Read more"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
