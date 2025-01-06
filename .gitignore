@@ -5,3 +5,5 @@ _site
 vendor
 .DS_Store
 .yarn/
+node_modules
+node_modules/
