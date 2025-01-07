@@ -4,7 +4,7 @@ og_type: website
 ---
 <div class="flex flex-row flex-wrap align-center justify-center my-6 ml-1">
     {% for card in site.home_cards %}
-        <div class="flex flex-col mx-12 border-2 rounded-lg p-4 shadow-md mb-3 lg:mb-2 w-96 lg:max-w-96 max-h-[50%]">
+        <div class="flex flex-col mx-12 lg:mx-8 border-2 rounded-lg p-4 shadow-md mb-4 lg:mb-2 w-96 lg:max-w-96 max-h-[50%]">
             <span class="flex mx-auto">
                 <img src="{{ card.image }}" alt="{{ card.img_alt }}" class="max-w-80 max-h-auto lg:w-96 lg:h-56" />
             </span>
@@ -14,7 +14,7 @@ og_type: website
                     <p class="truncate">{{ card.description }}</p>
                 </div>
                 <div class="flex flex-row-reverse relative mt-2">
-                    <button class="flex text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg p-2 mt-1 mr-2" type="button">
+                    <button class="flex text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg p-2 mt-1 mr-1" type="button">
                         {% if card.button_url != nil %}
                             <a href="{{ card.button_url }}">{{ card.button_text }}</a>
                         {% else %}
