@@ -58,7 +58,6 @@ home_cards:
     description: "Lorem ipsum dolor sit amet."
     button_text: "Read more"
 
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
