@@ -43,7 +43,7 @@ home_cards:
   - image: "/assets/images/a-close-up-of-black-microphone.jpg"
     img_alt: "A Close Up Of Black Microphone Photo by Thom Bradley on Burst by Shopify"
     heading: "Hey"
-    description: "Lorem ipsum dolor sit amet."
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     button_text: "Read more"
     button_url: "/"
   - image: "/assets/images/entrepreneurs-journal.jpg"
