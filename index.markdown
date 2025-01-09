@@ -9,10 +9,13 @@ on_banner_text: "THE. ONLY. TOOL. YOU. EVER. NEED."
 post_banner_text: "You see this, you get this."
 
 card_data:
-  - text: "Lorem ipsum dolor sit amet."
-    img: ""
+  - heading: "Lorem Ipsum!"
+    text: "Lorem ipsum dolor sit amet."
+    img: "/assets/images/entrepreneurs-journal.jpg"
     img_alt: "Photo"
     button:
-      - url: "/"
+        url: "/"
         text: "Read more"
+
+
 ---

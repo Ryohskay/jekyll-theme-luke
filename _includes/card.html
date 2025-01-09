@@ -1,17 +1,22 @@
 <div>
     {% for card in page.card_data %}
-    <div class="flex odd:flex-row even:flex-row-reverse">
-        <div class="flex flex-col">
-            <p>
+    <div class="flex odd:flex-row even:flex-row-reverse items-center border rounded-xl mx-6 md:mx-14 mb-12 shadow-md">
+        <div class="flex flex-col items-center mx-auto">
+            {% if card.heading != nil %}
+                <h2 class="text-3xl">{{ card.heading }}</h2>
+            {% endif %}
+            <p class="mt-2">
                 {{ card.text }}
             </p>
-            {% if card.button != nil %}
-                <button>
+            {% if card.button.text != nil %}
+                <button class="flex text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg p-2 mt-4 mr-1" type="button">
                     <a href="{{ card.button.url }}">{{ card.button.text }}</a>
                 </button>
             {% endif %}
         </div>
-        <img src="{{ card.img }}" alt="{{ card.img_alt }}" />
+        <div>
+            <img src="{{ card.img }}" alt="{{ card.img_alt }}" class="rounded-md" />
+        </div>
     </div>
     {% endfor %}
 </div>
