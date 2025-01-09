@@ -7,4 +7,12 @@ banner: /assets/images/kitty-cat-helps-at-work.jpg
 banner_alt: "Kitty Cat Helps At Work Photo by Patchanu Noree on Burst by Shopify"
 on_banner_text: "THE. ONLY. TOOL. YOU. EVER. NEED."
 post_banner_text: "You see this, you get this."
+
+card_data:
+  - text: "Lorem ipsum dolor sit amet."
+    img: ""
+    img_alt: "Photo"
+    button:
+      - url: "/"
+        text: "Read more"
 ---

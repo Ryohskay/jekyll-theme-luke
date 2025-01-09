@@ -1,0 +1,17 @@
+<div>
+    {% for card in page.card_data %}
+    <div class="flex odd:flex-row even:flex-row-reverse">
+        <div class="flex flex-col">
+            <p>
+                {{ card.text }}
+            </p>
+            {% if card.button != nil %}
+                <button>
+                    <a href="{{ card.button.url }}">{{ card.button.text }}</a>
+                </button>
+            {% endif %}
+        </div>
+        <img src="{{ card.img }}" alt="{{ card.img_alt }}" />
+    </div>
+    {% endfor %}
+</div>

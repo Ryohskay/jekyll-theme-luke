@@ -1028,6 +1028,10 @@ input[type="range"]::-ms-fill-lower {
   margin-right: 1rem;
 }
 
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -1048,20 +1052,12 @@ input[type="range"]::-ms-fill-lower {
   margin-top: 1.25rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
-}
-
-.mr-6 {
-  margin-right: 1.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mr-8 {
-  margin-right: 2rem;
 }
 
 .block {
@@ -1168,6 +1164,14 @@ input[type="range"]::-ms-fill-lower {
   flex-wrap: wrap;
 }
 
+.place-items-start {
+  place-items: start;
+}
+
+.content-center {
+  align-content: center;
+}
+
 .items-start {
   align-items: flex-start;
 }
@@ -1176,12 +1180,24 @@ input[type="range"]::-ms-fill-lower {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .truncate {
@@ -1428,6 +1444,14 @@ ul.dropdown-nav {
 
 .first\:underline-offset-4:first-child {
   text-underline-offset: 4px;
+}
+
+.odd\:flex-row:nth-child(odd) {
+  flex-direction: row;
+}
+
+.even\:flex-row-reverse:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .hover\:bg-cyan-500:hover {
