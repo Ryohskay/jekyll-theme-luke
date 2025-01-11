@@ -78,6 +78,45 @@ footer_nav:
       - name: "Privacy Notice"
         url: "/"
 
+company_info_title: "会社概要"
+company:
+  - heading: "法人番号"
+    data:
+      - "0000000000000"
+  - heading: "会社名"
+    data:
+      - "ABC株式会社"
+  - heading: "代表者"
+    data:
+      - "山田 太郎"
+  - heading: "所在地"
+    data:
+      - "東京都千代田区1-1-1"
+  - heading: "資本金"
+    data:
+      - "100万円"
+  - heading: "事業内容"
+    data:
+      - "ITコンサルティング事業"
+      - "ソフトウェア開発事業"
+      - "プロモーション・コンテンツ企画制作事業"
+  - heading: "設立"
+    data:
+      - "1999年9月"
+  - heading: "従業員数"
+    data:
+      - "8名"
+  - heading: "主な取引先"
+    data:
+      - "D株式会社"
+      - "合同会社E"
+      - "有限会社F"
+  - heading: "主な取引銀行"
+    data:
+      - "G銀行（本店）"
+      - "H銀行（I支店）"
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

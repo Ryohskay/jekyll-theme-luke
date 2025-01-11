@@ -1,0 +1,28 @@
+<div class="overflow-auto mt-10" id="company_info">
+    <table>
+        <caption class="pt-6 pb-4 font-bold text-left text-2xl">
+            {{ site.company_info_title }}
+        </caption>
+        {% for company_info in site.company %}
+            <tr class="border-y">
+                {% if company_info.data.size == 1 %}
+                    <th scope="row" class="px-4 py-3">{{ company_info.heading }}</th>
+                    <td class="py-4">
+                        {% for item in company_info.data %}
+                            {{ item }}
+                        {% endfor %}
+                    </td>
+                {% else %}
+                    <th scope="row" class="px-4 py-3">{{ company_info.heading }}</th>
+                    <td class="py-4">
+                        <ul>
+                            {%- for item in company_info.data %}
+                            <li class="whitespace-pre">{{ item }}</li>
+                            {%- endfor %}
+                        </ul>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+</div>

@@ -17,5 +17,4 @@ card_data:
         url: "/"
         text: "Read more"
 
-
 ---

@@ -1,0 +1,13 @@
+<div class="overflow-auto mt-10" id="company_history">
+    <table>
+        <caption class="pt-6 pb-4 font-bold text-left text-2xl">
+            {{ site.company_history_caption }}
+        </caption>
+        {{ for hist_entry in site.company_history  }}
+            <tr class="border-y">
+                <th scope="row" class="px-4 py-3">{{ hist_entry.year }}</th>
+                <td class="py-4">{{ hist_entry.event }}</td>
+            </tr>
+        {{ endfor }}
+    </table>
+</div>

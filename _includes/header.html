@@ -16,6 +16,7 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                 </svg>
             </button>
+            <!-- menu close button -->
             <button class="hidden mx-2" onclick="closePane()" id="menu_close">
                 <svg class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -34,14 +35,16 @@
     <hr class="border-top-2 border-slate-300 mx-auto lg:mx-3" />
 
     <!-- mobile menu -->
-    <nav class="hidden border-b mx-5" id="mobile_nav">
-        <h4 class="text-md font-semibold pl-3 mt-2">Menu</h4>
-        <ul class="mb-2 dropdown-nav list-disc ml-4 pt-2">
-            {% for link in site.header_links %}
-                <li class="pl-2 mb-2 hover:bg-slate-100">
-                    <a class="text-2xl pr-4 text-align-center hover:underline" href="{{ link.url }}">{{ link.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+    <nav class="invisible border-b mx-5 relative" id="mobile_nav">
+        <div class="rounded shadow fixed bg-white px-7 pt-4 pb-7 absolute top-0 right-0">
+            <h4 class="text-md font-semibold pl-3 mt-2">Menu</h4>
+            <ul class="mb-2 dropdown-nav list-disc ml-4 pt-2">
+                {% for link in site.header_links %}
+                    <li class="pl-2 mb-2 hover:bg-slate-100">
+                        <a class="text-2xl pr-4 text-align-center hover:underline" href="{{ link.url }}">{{ link.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </nav>
 </header>

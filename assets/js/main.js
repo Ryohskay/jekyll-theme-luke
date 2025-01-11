@@ -4,9 +4,9 @@ function dropdown() {
     let menuClose = document.getElementById("menu_close");
 
     menuButton.classList.remove("flex");
-    menuButton.classList.add("hidden");
+    menuButton.classList.add("invisible");
 
-    mobileNav.classList.remove("hidden");
+    mobileNav.classList.remove("invisible");
     mobileNav.classList.add("flex");
     mobileNav.classList.add("flex-col");
 
@@ -19,12 +19,12 @@ function closePane() {
     let menuButton = document.getElementById("menu_sec");
     let menuClose = document.getElementById("menu_close");
 
-    menuButton.classList.remove("hidden");
+    menuButton.classList.remove("invisible");
     menuButton.classList.add("flex");
 
     mobileNav.classList.remove("flex");
     mobileNav.classList.remove("flex-col");
-    mobileNav.classList.add("hidden");
+    mobileNav.classList.add("invisible");
 
     menuClose.classList.remove("flex");
     menuClose.classList.add("hidden");

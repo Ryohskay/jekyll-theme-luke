@@ -1,0 +1,30 @@
+---
+layout: default
+og_type: website
+---
+<div class="mx-12 mt-12">
+    <h1 class="text-4xl mb-4">{{ page.title }}</h1>
+    <nav class="py-6 border-y-2">
+        <h2 class="text-2xl italic">Quick Links</h2>
+        <ul class="mt-3">
+            {% if site.company %}
+                <li class="before:content-['▶︎'] before:text-blue-700"><a href="#company_info" class="underline pl-1">{{ site.company_info_title }}</a></li>
+            {% endif %}
+            {% if site.company_history %}
+                <li><a href="#company_history" class="underline">{{ site.company_history_caption }}</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="mx-12 mb-8 mt-12">
+        {{ content }}
+        {% if site.company %}
+            {% include company_info.html %}
+        {% endif %}
+        {% if site.company_history %}
+            {% include history.html %}
+        {% endif %}
+        {% if page.card_data %}
+            {% include card.html %}
+        {% endif %}
+    </div>
+</div>
