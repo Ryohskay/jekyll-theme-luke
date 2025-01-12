@@ -1,13 +1,15 @@
 <!-- HTML file for header menu on all pages -->
 <header class="lg:py-2">
     <nav class="flex flex-row relative lg:mx-3 justify-between items-center">
-        <span id="left_header_box" class="flex items-center">
-            <div>
-                <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" class="rounded-xl max-h-12 lg:h-12 lg:mx-4"/>
-            </div>
-            <div>
-                <p class="text-3xl lg:text-4xl font-bold">{{ site.title }}</p>
-            </div>
+        <span id="left_header_box">
+            <a href="{{ site.base_url }}/" class="flex flex-row items-center">
+                <div>
+                    <img src="{{ site.logo }}" alt="{{ site.logo_alt }}" class="rounded-xl max-h-12 lg:h-12 lg:mx-4"/>
+                </div>
+                <div>
+                    <p class="text-3xl lg:text-4xl font-bold">{{ site.title }}</p>
+                </div>
+            </a>
         </span>
         <span class="flex lg:hidden mr-2">
             <!-- mobile hamburger menu icon -->
@@ -25,7 +27,7 @@
         </span>
         <ul class="hidden lg:flex">
             {% for link in site.header_links %}
-                <li class="lg:flex first:underline first:decoration-slate-600 first:underline-offset-4">
+                <li class="lg:flex">
                     <a class="text-2xl px-4" href="{{ link.url }}">{{ link.name }}</a>
                 </li>
             {% endfor %}
