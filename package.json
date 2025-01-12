@@ -8,6 +8,7 @@
   "scripts": {
     "jekyll": "bundle exec jekyll serve",
     "tailwind": "yarn dlx tailwindcss -i ./assets/css/main.css -o ./assets/css/styles.css --watch",
-    "start": "TAILWIND_MODE=watch NODE_ENV=development yarn run jekyll & yarn run tailwind"
+    "start": "TAILWIND_MODE=watch NODE_ENV=development yarn run jekyll & yarn run tailwind",
+    "build": "NODE_ENV=production JEKYLL_ENV=production yarn dlx tailwindcss -i ./assets/css/main.css -o ./assets/css/styles.css --minify & bundle exec jekyll build"
   }
 }
