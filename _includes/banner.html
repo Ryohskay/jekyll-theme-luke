@@ -1,5 +1,5 @@
 <div class="block container relative mx-auto mt-5">
-    <img src="{{ page.banner }}" alt="{{ page.banner_alt | default: 'Landing page hero image' }}" class="z-10 rounded">
+    <img src="{{ page.banner }}" alt="{{ page.banner_alt | default: 'Landing page hero image' }}" class="z-10 rounded shadow-lg">
     {%- if page.on_banner_text != nil -%}
         <div class="absolute top-2.5 lg:top-16 left-1 bg-white bg-gradient-to-r from-indigo-200 to-white rounded-lg px-6 py-3 z-20 shadow-sm">
             <p class="text-2xl lg:text-5xl mx-2">{{ page.on_banner_text }}</p>
