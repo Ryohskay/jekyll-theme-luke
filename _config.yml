@@ -33,11 +33,17 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/assets/images/luke_theme_logo_trimmed.jpeg"
 logo_alt: "Luke theme's logo"
 
+read_more_text: "詳細はこちら"
+
 header_links:
   - name: "Home"
     url: "/"
+  - name: "Products"
+    url: "/products/"
+  - name: "News"
+    url: "/news/"
   - name: "About us"
-    url: "/about"
+    url: "/about/"
 
 home_cards:
   - image: "/assets/images/a-close-up-of-black-microphone.jpg"
