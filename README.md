@@ -7,7 +7,8 @@ Luke is a minimalist, modular, and highly customisable Jekyll theme for those wh
 ### Prerequisites
 
 - `ruby` (and `gem`)
-- `jekyll`
+- ruby `bundler`
+- ruby `jekyll`
 - Node.js
   - Make sure that `yarn` is available. Run `corepack enable yarn` to enable yarn.
 
@@ -20,5 +21,10 @@ Luke is a minimalist, modular, and highly customisable Jekyll theme for those wh
 
 By running 4., you can receive updates to your theme by `git pull --rebase upstream main` (But you might get tons of merge conflicts).
 
+### Build
+
+Run `yarn run build` to build. Run `yarn run production-build` for production build.
+
 ## License
+
 This theme is developed by Ryosuke Nagata, and it is freely available under the terms of MIT License (See [LICENSE.md](https://github.com/Ryohskay/jekyll-theme-luke/blob/main/LICENSE)).
