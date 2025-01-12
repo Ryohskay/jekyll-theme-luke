@@ -11,4 +11,4 @@ Luke is a minimalist, modular, and highly customisable Jekyll theme for those wh
 By running the third command, you can receive updates to your theme by `git pull --rebase upstream main` (But you might get tons of merge conflicts).
 
 ## License
-This theme is developed by Ryosuke Nagata, and it is freely available under the terms of MIT License (See [LICENSE.md](https://github.com/Ryohskay/jekyll-theme-luke/LICENSE.md)).
+This theme is developed by Ryosuke Nagata, and it is freely available under the terms of MIT License (See [LICENSE.md](https://github.com/Ryohskay/jekyll-theme-luke/blob/main/LICENSE)).
