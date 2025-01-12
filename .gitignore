@@ -7,3 +7,4 @@ vendor
 .yarn/
 node_modules
 node_modules/
+.pnp.*
