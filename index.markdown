@@ -10,7 +10,7 @@ post_banner_text: "You see this, you get this."
 
 card_data:
   - heading: "Lorem Ipsum!"
-    text: "Lorem ipsum dolor sit amet."
+    text: "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
     img: "/assets/images/entrepreneurs-journal.jpg"
     img_alt: "Photo"
     button:

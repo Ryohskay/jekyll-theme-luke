@@ -1,11 +1,11 @@
 <div>
     {% for card in page.card_data %}
-    <div class="flex odd:flex-row even:flex-row-reverse items-center border rounded-xl mx-6 md:mx-14 mb-12 shadow-md">
-        <div class="flex flex-col items-center mx-auto">
+    <div class="flex odd:flex-row even:flex-row-reverse items-center border rounded-xl mx-6 md:mx-14 lg:my-12 shadow-md">
+        <div class="flex flex-col items-center mx-auto text-wrap lg:max-w-80">
             {% if card.heading != nil %}
                 <h2 class="text-3xl">{{ card.heading }}</h2>
             {% endif %}
-            <p class="mt-2">
+            <p class="mt-2 mx-8">
                 {{ card.text }}
             </p>
             {% if card.button.text != nil %}
