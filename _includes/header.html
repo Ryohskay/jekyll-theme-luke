@@ -28,18 +28,31 @@
         <ul class="hidden lg:flex">
         {% for link in site.header_links %}
             {% if link.dropdown %}
-                <button id="{{ link.dropdown }}_opener" class="flex-row px-4 items-center" onclick="dropdown('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
-                    <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
-                    </svg>
-                </button>
-                <button id="{{ link.dropdown }}_closer" class="hidden" onclick="closePane('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
-                    <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="rotate-90">
-                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
-                    </svg>
-                </button>
+                <div class="relative">
+                    <button id="{{ link.dropdown }}_opener" class="flex flex-row px-4 items-center" onclick="dropdown('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
+                        <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                        </svg>
+                    </button>
+                    <button id="{{ link.dropdown }}_closer" class="hidden flex-row px-4 items-center" onclick="closePane('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
+                        <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="rotate-180">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                        </svg>
+                    </button>
+                    {% for menu in site.dropdown_menus %}
+                    {% if menu.id == link.dropdown%}
+                        <ul id="{{ menu.id }}" class="hidden bg-white flex flex-col border border-slate-300 rounded-lg p-4 absolute top-10 right-5">
+                            {% for m_link in menu.links %}
+                                <li>
+                                    <a href="{{ m_link.url }}">{{ m_link.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             {% else %}
                 <li class="lg:flex hover:underline hover:underline-offset-2">
                     <a class="text-2xl px-4" href="{{ link.url }}">{{ link.name }}</a>
@@ -51,18 +64,9 @@
 
     <hr class="border-top-2 border-slate-300 mx-auto lg:mx-3" />
 
-    {% for menu in site.dropdown_menus %}
-        <ul id="{{ menu.id }}" class="hidden">
-        {% for link in menu.links %}
-            <li>
-                <a href="{{ link.url }}">{{ link.name }}</a>
-            </li>
-        {% endfor %}
-        </ul>
-    {% endfor %}
 
     <!-- mobile menu -->
-    <nav class="invisible z-30 mx-5 relative" id="mobile_nav">
+    <nav id="mobile_nav" class="hidden z-30 mx-5 relative">
         <div class="flex flex-col rounded shadow fixed bg-white px-7 pt-4 pb-7 absolute top-0 right-0">
             <h4 class="text-md font-semibold pl-3">Menu</h4>
             <ul class="dropdown-nav list-disc ml-4 mt-1">

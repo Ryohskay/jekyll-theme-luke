@@ -6,7 +6,7 @@ function dropdown(menu_id, opener_id, closer_id) {
     menuButton.classList.remove("flex");
     menuButton.classList.add("hidden");
 
-    mobileNav.classList.remove("invisible");
+    mobileNav.classList.remove("hidden");
     mobileNav.classList.add("flex");
 
     menuClose.classList.remove("hidden");
@@ -22,7 +22,7 @@ function closePane(menu_id, opener_id, closer_id) {
     menuButton.classList.add("flex");
 
     mobileNav.classList.remove("flex");
-    mobileNav.classList.add("invisible");
+    mobileNav.classList.add("hidden");
 
     menuClose.classList.remove("flex");
     menuClose.classList.add("hidden");
