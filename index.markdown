@@ -14,7 +14,7 @@ card_data:
     img: "/assets/images/entrepreneurs-journal.jpg"
     img_alt: "Photo"
     button:
-        url: "/"
-        text: "Read more"
+      url: "/"
+      text: "Read more"
 
 ---
