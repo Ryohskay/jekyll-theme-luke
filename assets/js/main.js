@@ -1,29 +1,27 @@
-function dropdown() {
-    let mobileNav = document.getElementById("mobile_nav");
-    let menuButton = document.getElementById("menu_sec");
-    let menuClose = document.getElementById("menu_close");
+function dropdown(menu_id, opener_id, closer_id) {
+    let mobileNav = document.getElementById(menu_id);
+    let menuButton = document.getElementById(opener_id);
+    let menuClose = document.getElementById(closer_id);
 
     menuButton.classList.remove("flex");
-    menuButton.classList.add("invisible");
+    menuButton.classList.add("hidden");
 
     mobileNav.classList.remove("invisible");
     mobileNav.classList.add("flex");
-    mobileNav.classList.add("flex-col");
 
     menuClose.classList.remove("hidden");
     menuClose.classList.add("flex");
 };
 
-function closePane() {
-    let mobileNav = document.getElementById("mobile_nav");
-    let menuButton = document.getElementById("menu_sec");
-    let menuClose = document.getElementById("menu_close");
+function closePane(menu_id, opener_id, closer_id) {
+    let mobileNav = document.getElementById(menu_id);
+    let menuButton = document.getElementById(opener_id);
+    let menuClose = document.getElementById(closer_id);
 
-    menuButton.classList.remove("invisible");
+    menuButton.classList.remove("hidden");
     menuButton.classList.add("flex");
 
     mobileNav.classList.remove("flex");
-    mobileNav.classList.remove("flex-col");
     mobileNav.classList.add("invisible");
 
     menuClose.classList.remove("flex");

@@ -1,6 +1,6 @@
 <!-- HTML file for header menu on all pages -->
 <header>
-    <nav class="flex flex-row lg:mx-3 lg:py-4 justify-between items-center">
+    <nav class="flex flex-row py-2 lg:mx-3 lg:py-4 justify-between items-center">
         <span id="left_header_box">
             <a href="{{ site.base_url }}/" class="flex flex-row items-center">
                 <div>
@@ -13,38 +13,82 @@
         </span>
         <span class="flex lg:hidden mr-2">
             <!-- mobile hamburger menu icon -->
-            <button class="mx-3" onclick="dropdown()" id="menu_sec">
+            <button class="mx-3" onclick="dropdown('mobile_nav', 'menu_sec', 'menu_close')" id="menu_sec">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                 </svg>
             </button>
             <!-- menu close button -->
-            <button class="hidden mx-2" onclick="closePane()" id="menu_close">
+            <button class="hidden mx-2" onclick="closePane('mobile_nav', 'menu_sec', 'menu_close')" id="menu_close">
                 <svg class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </button>
         </span>
         <ul class="hidden lg:flex">
-            {% for link in site.header_links %}
+        {% for link in site.header_links %}
+            {% if link.dropdown %}
+                <button id="{{ link.dropdown }}_opener" class="flex-row px-4 items-center" onclick="dropdown('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
+                    <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                    </svg>
+                </button>
+                <button id="{{ link.dropdown }}_closer" class="hidden" onclick="closePane('{{ link.dropdown }}', '{{ link.dropdown }}_opener', '{{ link.dropdown }}_closer')" type="button">
+                    <li class="text-2xl mr-1 hover:underline hover:underline-offset-2">{{ link.name }}</li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="rotate-90">
+                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                    </svg>
+                </button>
+            {% else %}
                 <li class="lg:flex hover:underline hover:underline-offset-2">
                     <a class="text-2xl px-4" href="{{ link.url }}">{{ link.name }}</a>
                 </li>
-            {% endfor %}
-            </ul>
+            {% endif %}
+        {% endfor %}
+        </ul>
     </nav>
 
     <hr class="border-top-2 border-slate-300 mx-auto lg:mx-3" />
 
+    {% for menu in site.dropdown_menus %}
+        <ul id="{{ menu.id }}" class="hidden">
+        {% for link in menu.links %}
+            <li>
+                <a href="{{ link.url }}">{{ link.name }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
     <!-- mobile menu -->
-    <nav class="invisible border-b mx-5 relative" id="mobile_nav">
-        <div class="rounded shadow fixed bg-white px-7 pt-4 pb-7 absolute top-0 right-0">
-            <h4 class="text-md font-semibold pl-3 mt-2">Menu</h4>
-            <ul class="mb-2 dropdown-nav list-disc ml-4 pt-2">
+    <nav class="invisible z-30 mx-5 relative" id="mobile_nav">
+        <div class="flex flex-col rounded shadow fixed bg-white px-7 pt-4 pb-7 absolute top-0 right-0">
+            <h4 class="text-md font-semibold pl-3">Menu</h4>
+            <ul class="dropdown-nav list-disc ml-4 mt-1">
                 {% for link in site.header_links %}
-                    <li class="pl-2 mb-2 hover:bg-slate-100">
-                        <a class="text-2xl pr-4 text-align-center hover:underline" href="{{ link.url }}">{{ link.name }}</a>
-                    </li>
+                    {% if link.dropdown %}
+                        <li class="pl-2 mb-0.5">
+                            <h4 class="text-2xl">{{ link.name }}</h4>
+                            <div class="bg-slate-50 p-2 mt-1 rounded-md">
+                                <ul>
+                                {% for menu in site.dropdown_menus %}
+                                    {% if menu.id == link.dropdown %}
+                                        {% for m_link in menu.links %}
+                                            <li class="text-xl before:content-['⇰'] pr-4 text-align-center hover:underline hover:bg-slate-100">
+                                                <a href="{{ m_link.url }}">{{ m_link.name }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li class="pl-2 mb-2 hover:bg-slate-100">
+                            <a class="text-2xl pr-4 text-align-center hover:underline" href="{{ link.url }}">{{ link.name }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

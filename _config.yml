@@ -44,6 +44,17 @@ header_links:
     url: "/news/"
   - name: "About us"
     url: "/about/"
+  - name: "Languages"
+    dropdown: "langs"
+
+dropdown_menus:
+  - id: "langs"
+    links:
+      - name: "日本語"
+        url: "/"
+      - name: "English"
+        url: "/en/"
+
 
 home_cards:
   - image: "/assets/images/a-close-up-of-black-microphone.jpg"
