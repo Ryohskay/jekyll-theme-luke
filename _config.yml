@@ -149,6 +149,9 @@ company:
       - "G銀行（本店）"
       - "H銀行（I支店）"
 
+# Include custom directories and files
+include:
+  - _pages/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
