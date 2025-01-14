@@ -84,6 +84,22 @@ footer_nav:
       - name: "Privacy Notice"
         url: "/"
 
+
+# About page
+ceo_message_title: "会社代表挨拶"
+ceo_message: >
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+  pariatur. Excepteur sint occaecat cupidatat non proident, 
+  sunt in culpa qui officia deserunt mollit anim id est laborum.
+ceo_name: "代表取締役 山田太郎"
+ceo_photo: /assets/images/light-and-backdrop-photography.jpg
+ceo_photo_alt: "Light and Backdrop Photography Photo by Matthew Henry on Burst by Shopify"
+
+
 company_info_title: "会社概要"
 company:
   - heading: "法人番号"

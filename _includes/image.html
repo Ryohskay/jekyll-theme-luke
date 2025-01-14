@@ -1,0 +1,6 @@
+<div>
+    <img src="{{ include.img_src }}" alt="{{ include.img_alt }}" class="rounded-xl shadow-xl max-w-xl">
+    {% if include.caption %}
+        <p>{{ include.caption }}</p>
+    {% endif %}
+</div>

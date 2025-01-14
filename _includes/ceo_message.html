@@ -1,0 +1,10 @@
+<div id="ceo_message" class="flex flex-col lg:flex-row mt-12">
+    <div class="flex flex-col lg:mr-12 lg:justify-start">
+        <h2>{{ site.ceo_message_title }}</h2>
+        <p class="text-wrap">{{ site.ceo_message }}</p>
+        <h5 class="self-end mt-3">{{ site.ceo_name }}</h5>
+    </div>
+    {% if site.ceo_photo %}
+        <img src="{{ site.ceo_photo }}" alt="{{ site.ceo_photo_alt }}" class="object object-contain max-h-96 my-6 lg:mr-16" />
+    {% endif %}
+</div>
