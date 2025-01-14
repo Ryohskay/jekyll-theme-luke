@@ -43,9 +43,9 @@
                     </button>
                     {% for menu in site.dropdown_menus %}
                     {% if menu.id == link.dropdown%}
-                        <ul id="{{ menu.id }}" class="hidden bg-white flex flex-col border border-slate-300 rounded-lg p-4 absolute top-10 right-5">
+                        <ul id="{{ menu.id }}" class="hidden bg-white flex flex-col border border-slate-300 rounded-lg p-4 z-30 shadow absolute top-10 right-5">
                             {% for m_link in menu.links %}
-                                <li>
+                                <li class="text-xl">
                                     <a href="{{ m_link.url }}">{{ m_link.name }}</a>
                                 </li>
                             {% endfor %}
