@@ -2,28 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .normal h2{
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .normal h3{
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.75rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .normal h4{
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .normal p{
+        @apply max-w-7xl mb-2.5 whitespace-pre-wrap;
+    }
+    
+    .normal img{
+        @apply max-w-44;   
+    }
 
-h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 2rem;
-    margin-bottom: 1.2rem;
-};
-
-h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    line-height: 1.75rem;
-    margin-bottom: 1.2rem;
-};
-
-h4 {
-    font-size: 1.15rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.2rem;
-};
-
-ul.dropdown-nav {
-    list-style-type: disc;
-    list-style: "*";
-};
+    ul.dropdown-nav{
+        list-style-type: disc;
+        list-style: "*";
+    }
+}
