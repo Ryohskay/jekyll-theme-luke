@@ -2,6 +2,13 @@
 layout: page
 title: Our Products
 permalink: /products/
+card_data:
+  - heading: "Hoge Appeal"
+    texts:
+      - "Hoge hoge fuga fuga"
+      - "Lorem ipsum dolor sit amet."
+    img: /assets/images/entrepreneurs-journal.jpg
+    img_alt: "assets/images/entrepreneurs-journal.jpg"
 ---
 
 ## Our Flagship Product
