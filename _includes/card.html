@@ -14,9 +14,11 @@
                 </button>
             {% endif %}
         </div>
+        {% if card.img %}
         <div>
-            <img src="{{ card.img }}" alt="{{ card.img_alt }}" class="rounded-md" />
+            <img src="{{ card.img }}" alt="{{ card.img_alt | default: 'card image' }}" class="rounded-md" />
         </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
