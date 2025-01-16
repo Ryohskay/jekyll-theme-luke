@@ -22,3 +22,8 @@ express yourself beyond the limitations of standardised blank languages.
 
 Even if you want to create a website in rare and unrepresented languages like
 *Sḵwx̱wú7mesh sníchim* or *Kalaallisut* with Jekyll, you can do that easily (but be careful with fonts).
+
+## Other Products
+
+- Something
+- Hoge hoge
