@@ -17,7 +17,7 @@ you simply get html, css, and js files, so you can control how you publish your 
 
 ### (Human) Language-agnostic
 
-It's very well modularised, so you can customise almost any words on the template, and you can
+Luke theme is modularised, so you can customise almost any words on the template, and you can
 express yourself beyond the limitations of standardised blank languages.
 
 Even if you want to create a website in rare and unrepresented languages like

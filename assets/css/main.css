@@ -4,34 +4,23 @@
 
 @layer base {
     .normal h2{
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 2rem;
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
+        @apply text-3xl mt-6 mb-5;
     }
     
     .normal h3{
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.75rem;
-        margin-top: 1.2rem;
-        margin-bottom: 0.7rem;
+        @apply text-xl font-bold mt-9 mb-3;
     }
     
     .normal h4{
-        font-size: 1.15rem;
-        line-height: 1.5rem;
-        margin-top: 1.2rem;
-        margin-bottom: 0.7rem;
+        @apply text-lg mt-9 mb-3;
     }
     
     .normal p{
-        @apply max-w-7xl mb-2.5 whitespace-pre-wrap;
+        @apply text-lg max-w-7xl mb-2.5 whitespace-pre-wrap;
     }
     
     .normal img{
-        @apply max-w-44;   
+        @apply max-h-60 overflow-clip;
     }
 
     ul.dropdown-nav{
