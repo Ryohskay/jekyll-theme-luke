@@ -16,7 +16,7 @@
     }
     
     .normal p{
-        @apply text-lg max-w-7xl mb-2.5 whitespace-pre-wrap;
+        @apply text-lg max-w-7xl mb-2.5 whitespace-normal;
     }
 
     .normal ul li{
@@ -26,9 +26,17 @@
     .normal ol li{
         @apply text-lg max-w-7xl mb-1 ml-5 list-decimal;
     }
-    
+
     .normal img{
-        @apply max-h-60 overflow-clip;
+        @apply max-w-full lg:max-w-xl overflow-clip rounded-xl shadow-md my-7
+    }
+
+    .card img{
+        @apply max-w-[95%] lg:max-w-xl overflow-clip shadow-lg mt-7 mb-3 lg:my-7;
+    }
+
+    .card h2{
+        @apply text-3xl font-bold mt-0 mb-2;
     }
 
     ul.dropdown-nav{

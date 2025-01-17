@@ -1,27 +1,25 @@
-<div>
+<div class="mt-10 card">
     {% for card in page.card_data %}
-    <div class="flex odd:flex-row even:flex-row-reverse items-center border rounded-xl mx-6 md:mx-20 self-center justify-items-center lg:my-12 shadow-md">
-        <div class="flex flex-col items-center mx-auto lg:max-w-[50%]">
+    <div class="flex flex-col lg:odd:flex-row lg:even:flex-row-reverse border rounded-xl lg:mx-6 self-center items-center lg:justify-around lg:my-12 shadow-md">
+        <div class="flex flex-col items-center lg:items-start justify-start mt-6 lg:mt-0 lg:ml-3">
             {% if card.heading != nil %}
                 <h2 class="text-3xl">{{ card.heading }}</h2>
             {% endif %}
-            <div class="mt-2 mx-8">
+            <div class="mt-0.5">
                 {% for text in card.texts%}
-                <p class="text-pretty mt-2 mb-1 text-left">
-                    {{ text }}
+                <p class="text-pretty mt-2 lg:mb-1">
+                    {{ text | strip }}
                 </p>
                 {% endfor %}
             </div>
             {% if card.button.text != nil %}
-                <button class="flex text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg p-2 mt-4 mr-1" type="button">
+                <button class="flex text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg lg:p-2 lg:mt-4 lg:mr-1" type="button">
                     <a href="{{ card.button.url }}">{{ card.button.text }}</a>
                 </button>
             {% endif %}
         </div>
         {% if card.img %}
-        <div class="mr-8">
-            <img src="{{ card.img }}" alt="{{ card.img_alt | default: 'card image' }}" class="rounded-md" />
-        </div>
+        <img src="{{ card.img }}" alt="{{ card.img_alt | default: 'card image' }}" />
         {% endif %}
     </div>
     {% endfor %}

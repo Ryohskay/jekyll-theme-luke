@@ -1,5 +1,5 @@
 <footer class="flex-1 flex-col pb-4 bg-blue-100">
-    <div class="flex flex-row justify-around pt-4">
+    <div class="flex flex-col lg:flex-row justify-around pt-4 items-center lg:mx-auto">
         <div class="flex flex-col items-start">
             <div class="flex flex-row items-center">
                 <div class="flex">
@@ -15,9 +15,9 @@
                 </p>
             </span>
         </div>
-        <div class="flex flex-row mr-2 items-top mt-2">
+        <div class="flex flex-row lg:mr-2 items-top mt-2">
             {% for f_nav in site.footer_nav %}
-                <div class="flex flex-col mr-5">
+                <div class="flex flex-col mx-2 lg:mr-5">
                     <h3 class="font-semibold mb-2">{{ f_nav.heading }}</h3>
                     <ul>
                     {% for link in f_nav.navigations %}

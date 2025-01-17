@@ -29,6 +29,8 @@ you simply get html, css, and js files, so you can control how you publish your 
 
 ### (Human) Language-agnostic
 
+![Travel Plans Are The Best Plans Photo by Rahul Pandit on Burst by Shopify](/assets/images/travel-plans-are-the-best-plans.jpg)
+
 Luke theme is modularised, so you can customise almost any words on the template, and you can
 express yourself beyond the limitations of standardised blank languages.
 
