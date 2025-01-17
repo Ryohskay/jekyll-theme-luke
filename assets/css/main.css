@@ -19,8 +19,12 @@
         @apply text-lg max-w-7xl mb-2.5 whitespace-pre-wrap;
     }
 
-    .normal li{
+    .normal ul li{
         @apply text-lg max-w-7xl mb-1 px-5 relative before:content-['▶︎'] before:text-zinc-400 before:absolute before:left-0;
+    }
+
+    .normal ol li{
+        @apply text-lg max-w-7xl mb-1 ml-5 list-decimal;
     }
     
     .normal img{

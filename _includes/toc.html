@@ -1,0 +1,10 @@
+<!-- Table of Contents -->
+
+<nav class="lg:pt-12 pb-10 border-b">
+    <h2 class="text-2xl italic">Quick Links</h2>
+    <ul class="mt-6">
+    {% for link in page.toc %}
+        <li class="before:content-['▶︎'] before:text-blue-700 my-1"><a href="{{ link.url }}" class="underline pl-1">{{ link.heading }}</a></li>
+    {% endfor %}
+    </ul>
+</nav>

@@ -9,6 +9,11 @@ card_data:
       - "Lorem ipsum dolor sit amet."
     img: /assets/images/entrepreneurs-journal.jpg
     img_alt: "assets/images/entrepreneurs-journal.jpg"
+toc:
+  - heading: "Flagship"
+    url: "#our-flagship-product"
+  - heading: "Other Products"
+    url: "#other-products"
 ---
 
 ## Our Flagship Product
@@ -29,6 +34,11 @@ express yourself beyond the limitations of standardised blank languages.
 
 Even if you want to create a website in rare and unrepresented languages like
 *Sḵwx̱wú7mesh sníchim* or *Kalaallisut* with Jekyll, you can do that easily (but be careful with fonts).
+
+### Strengths
+
+1. Hoge hoge
+2. Fuga fuga
 
 ## Other Products
 
