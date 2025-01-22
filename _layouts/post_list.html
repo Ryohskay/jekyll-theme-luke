@@ -7,14 +7,14 @@ og_type: website
     {% if cat[0] == page.category %}
         {% if cat[1].size >= 1 %}
             {% for post in cat[1] %}
-            <div class="items-center border rounded-xl mx-6 mt-4 md:mx-14 mb-12 shadow-md">
-                <div class="items-left mx-16 mt-6">
+            <div class="items-center border rounded-xl mt-4 px-3 md:px-8 lg:mx-14 mb-12 shadow-md">
+                <div class="items-left lg:mx-16 mt-6">
                     <h2 class="text-3xl">{{ post.title }}</h2>
                     <p class="mt-4 text-elipsis overflow-hidden">
                         {{ post.excerpt }}
                     </p>
                 </div>
-                <div class="flex justify-end mr-14 mt-3 mb-4">
+                <div class="flex justify-end mr-14 mt-3 md:mt-4 mb-4">
                     <button class="text-semibold text-cyan-800 bg-white border border-sky-700 hover:text-white hover:bg-cyan-500 hover:text-bold rounded-lg p-2" type="button">
                         <a href="{{ post.url }}">{{ site.read_more_text }}</a>
                     </button>

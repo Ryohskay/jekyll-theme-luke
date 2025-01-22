@@ -3,8 +3,10 @@ layout: page
 og_type: website
 ---
 
-<div class="mx-12 mb-8 mt-12">
-    {{ content }}
+<div class="mx-0 lg:mx-12 mb-8 mt-12">
+    <div class="text-pretty">
+        {{ content }}
+    </div>
     {% if site.ceo_message %}
         {% include ceo_message.html %}
     {% endif %}
