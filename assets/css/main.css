@@ -1,54 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-    .normal h2{
-        @apply text-3xl mt-12 mb-5;
-    }
-    
-    .normal h3{
-        @apply text-xl font-bold mt-9 mb-3;
-    }
-    
-    .normal h4{
-        @apply text-lg mt-9 mb-3;
-    }
-    
-    .normal p{
-        @apply text-lg max-w-7xl mb-2.5 whitespace-normal;
-    }
 
-    .normal ul{
-        @apply mt-5;
-    }
+.normal h2{
+    @apply text-3xl mt-12 mb-5;
+}
 
-    .normal ol{
-        @apply mt-5 list-decimal;
-    }
+.normal h3{
+    @apply text-xl font-bold mt-9 mb-3;
+}
 
-    .normal ul li{
-        @apply text-lg max-w-7xl mb-1 px-5 relative before:content-['▶︎'] before:text-zinc-400 before:absolute before:left-0;
-    }
+.normal h4{
+    @apply text-lg mt-9 mb-3;
+}
 
-    .normal ol li{
-        @apply text-lg max-w-7xl mb-1 ml-5;
-    }
+.normal p{
+    @apply text-lg max-w-7xl mb-2.5 whitespace-normal;
+}
 
-    .normal img{
-        @apply max-w-full lg:max-w-xl overflow-clip rounded-xl shadow-md my-7
-    }
+.normal ul{
+    @apply mt-5;
+}
 
-    .card img{
-        @apply max-w-[95%] lg:max-w-xl overflow-clip shadow-lg mt-7 mb-3 lg:my-7;
-    }
+.normal ol{
+    @apply mt-5 list-decimal;
+}
 
-    .card h2{
-        @apply text-3xl font-bold mt-0 mb-2;
-    }
+.normal ul li{
+    @apply text-lg max-w-7xl mb-1 px-5 relative before:content-['▶︎'] before:text-zinc-400 before:absolute before:left-0;
+}
 
-    ul.dropdown-nav{
-        list-style-type: disc;
-        list-style: "*";
-    }
+.normal ol li{
+    @apply text-lg max-w-7xl mb-1 ml-5;
+}
+
+.normal img{
+    @apply max-w-full lg:max-w-xl overflow-clip rounded-xl shadow-md my-7
+}
+
+.card img{
+    @apply max-w-[95%] lg:max-w-xl overflow-clip shadow-lg mt-7 mb-3 lg:my-7;
+}
+
+.card h2{
+    @apply text-3xl font-bold mt-0 mb-2;
+}
+
+ul.dropdown-nav{
+    list-style-type: disc;
+    list-style: "*";
 }
