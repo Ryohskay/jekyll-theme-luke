@@ -2,6 +2,7 @@
   "name": "luke",
   "packageManager": "yarn@4.2.2",
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.0",
     "flowbite": "^2.5.2",
     "tailwindcss": "^3.4.17"
   },
