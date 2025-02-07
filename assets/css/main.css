@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.normal a{
+    @apply underline underline-offset-3 text-blue-300;
+}
 
 .normal h2{
     @apply text-3xl mt-12 mb-5;
