@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .normal a{
-    @apply underline underline-offset-3 text-blue-300;
+    @apply underline underline-offset-3 text-blue-600 hover:text-blue-400;
 }
 
 .normal h2{
