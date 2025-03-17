@@ -1,7 +1,7 @@
 <div class="mt-10 card">
     {% for card in page.card_data %}
-    <div class="flex flex-col lg:odd:flex-row lg:even:flex-row-reverse border rounded-xl mx-3 lg:mx-6 self-center items-center lg:justify-around lg:my-12 shadow-md">
-        <div class="flex flex-col items-center lg:items-start justify-center lg:justify-start mt-6 lg:mt-0 lg:ml-3">
+    <div class="flex flex-col lg:odd:flex-row lg:even:flex-row-reverse border rounded-xl mx-3 md:container md:mx-auto self-center items-center lg:justify-around lg:my-12 shadow-md">
+        <div class="flex flex-col items-center lg:items-start justify-center lg:justify-start mt-6 lg:mt-0 lg:mx-3">
             {% if card.heading != nil %}
                 <h2 class="text-3xl">{{ card.heading }}</h2>
             {% endif %}
@@ -19,7 +19,7 @@
             {% endif %}
         </div>
         {% if card.img %}
-        <img src="{{ card.img }}" alt="{{ card.img_alt | default: 'card image' }}" class="rounded-md" />
+        <img src="{{ card.img }}" alt="{{ card.img_alt | default: 'card image' }}" class="rounded-md mr-2" />
         {% endif %}
     </div>
     {% endfor %}
