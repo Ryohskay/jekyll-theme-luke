@@ -22,6 +22,17 @@ Our flagship product is our custom Jekyll theme: *Luke*.
 
 ![Luke logo]({{ site.baseurl }}/assets/images/luke_theme_logo_trimmed.jpeg)
 
+### Specs
+
+Here is a list as a table.
+
+| Spec | Feature |
+| ---: | :---:  |
+| A    | 1       |
+| B    | 2       |
+| Extraordinarily long spec name | 1 |
+| C | 4 |
+
 ### Modular Implementation
 
 It's a highly customisable theme which you can smoothly implement on and deploy to any platform:
